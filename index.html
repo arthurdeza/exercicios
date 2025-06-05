@@ -1,24 +1,149 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Exercício 2 – Padding</title>
+  <meta charset="UTF-8">
+  <title>Exercícios - Box Model</title>
   <style>
-    .box-com-padding {
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #005b99;
+      margin-top: 40px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    /* Estilos comuns */
+    .caixa1, .caixa2, .caixa3, .caixa4, .caixa5, .caixa6a, .caixa6b, .cartao {
+      margin-bottom: 30px;
+    }
+
+    /* Exercício 1 */
+    .caixa1 {
+      width: 300px;
+      height: 150px;
+      background-color: #d3eaff;
+    }
+
+    /* Exercício 2 */
+    .caixa2 {
       width: 300px;
       height: 150px;
       background-color: #d3eaff;
       padding: 20px;
     }
+
+    /* Exercício 3 */
+    .caixa3 {
+      width: 300px;
+      height: 150px;
+      background-color: #d3eaff;
+      padding: 20px;
+      border: 5px solid #333;
+    }
+
+    /* Exercício 4 */
+    .caixa4 {
+      width: 300px;
+      height: 150px;
+      background-color: #d3eaff;
+      padding: 20px;
+      border: 5px solid #333;
+      margin: 30px 10px 50px 10px;
+    }
+
+    .outra-caixa4 {
+      width: 300px;
+      height: 100px;
+      background-color: #ffdede;
+    }
+
+    /* Exercício 6 */
+    .caixa6a, .caixa6b {
+      width: 300px;
+      padding: 20px;
+      border: 5px solid #000;
+      margin-bottom: 20px;
+    }
+
+    .caixa6a {
+      background-color: #f0f0f0;
+    }
+
+    .caixa6b {
+      background-color: #c1f0d9;
+      box-sizing: border-box;
+    }
+
+    /* Exercício 7 */
+    .cartao {
+      width: 300px;
+      border: 2px solid #333;
+      padding: 15px;
+      margin: 20px auto;
+      background-color: #fdfdfd;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .cartao img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .cartao h3 {
+      margin: 10px 0 5px;
+    }
+
+    .cartao p {
+      color: #666;
+    }
   </style>
 </head>
 <body>
 
-  <div class="box-com-padding">
-    Exemplo de Box Model
+  <h1>Lista de Exercícios – Box Model</h1>
+
+  <!-- Exercício 1 -->
+  <h2>Exercício 1 – Caixa Simples</h2>
+  <div class="caixa1">Exemplo de Box Model</div>
+
+  <!-- Exercício 2 -->
+  <h2>Exercício 2 – Com Padding</h2>
+  <div class="caixa2">Exemplo de Box Model</div>
+  <p><strong>Pergunta:</strong> Sim, a caixa parece maior, pois o padding adiciona espaço interno, aumentando o tamanho visual.</p>
+
+  <!-- Exercício 3 -->
+  <h2>Exercício 3 – Com Borda</h2>
+  <div class="caixa3">Exemplo de Box Model</div>
+  <p><strong>Pergunta:</strong> A largura total é: 300 + 2×20 (padding) + 2×5 (borda) = 350px.</p>
+
+  <!-- Exercício 4 -->
+  <h2>Exercício 4 – Com Margens</h2>
+  <div class="caixa4">Exemplo de Box Model</div>
+  <div class="outra-caixa4">Outra Caixa</div>
+
+  <!-- Exercício 5 -->
+  <h2>Exercício 5 – Inspeção com DevTools</h2>
+  <div class="caixa4">Use o F12 para visualizar o modelo de caixa.</div>
+
+  <!-- Exercício 6 -->
+  <h2>Exercício 6 – box-sizing</h2>
+  <div class="caixa6a">Sem box-sizing</div>
+  <div class="caixa6b">Com box-sizing: border-box</div>
+  <p><strong>Pergunta:</strong> A caixa sem <code>box-sizing</code> ultrapassou os 300px porque o padding e a borda foram somados ao conteúdo.</p>
+
+  <!-- Exercício 7 -->
+  <h2>Exercício 7 – Cartão de Perfil</h2>
+  <div class="cartao">
+    <img src="https://via.placeholder.com/300x150" alt="Foto de perfil">
+    <h3>Arthur Silva</h3>
+    <p>Estudante de Web Design e entusiasta de tecnologia.</p>
   </div>
 
 </body>
 </html>
-
 
